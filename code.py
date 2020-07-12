@@ -55,7 +55,7 @@ def post_back_to(payload: str) -> None:
     print(payload.headers)
     
     post_uri = f"{payload.headers['X-Post-Back-To']}"
-    file = {
+    files = {
         "image": open(file_path / "image.jpg", "rb"),
         "code": open(file_path / "code.py", "rb"),
         "resume": open(file_path / "resume.pdf", "rb")
@@ -68,7 +68,7 @@ def post_back_to(payload: str) -> None:
         "resume":"https://github.com/lbarrios1985/proveyourworth/blob/master/resume.pdf",
         "image":"https://github.com/lbarrios1985/proveyourworth/blob/master/image.jpg"
     }
-    
+
     cookie = session.cookies.get("PHPSESSID")
     one = requests.cookies.RequestsCookieJar()
     one.set("PHPSESSID", cookie)
@@ -80,7 +80,7 @@ def post_back_to(payload: str) -> None:
 
     # session.cookies.set("PHPSESSID", cookie)
     
-    request = session1.post(post_uri, data=data, files=file, cookies= one)
+    request = session.post(post_uri, data=data, files=files, cookies =one)
     print(request.status_code)
     print(request.text)
 
