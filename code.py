@@ -64,9 +64,9 @@ def post_back_to(payload: str) -> None:
         "email": "nikeven@gmail.com",
         "name": "Luis Barrios",
         "aboutme": "Desarrollador Full stack,especializado en el Desarrollo de Aplicaciones Web, bajo diferentes lenguajes de programación (Python, Php, Javascript) y Frameworks (Django, Laravel, Nodejs, Vuejs). ",
-        "code":"https://github.com/lbarrios1985/proveyourworth/code.py",
-        "resume":"https://www.linkedin.com/in/luis-barrios-8b5505137/",
-        "image":"https://github.com/lbarrios1985/proveyourworth/image.jpg"
+        "code":"https://github.com/lbarrios1985/proveyourworth/blob/master/code.py",
+        "resume":"https://github.com/lbarrios1985/proveyourworth/blob/master/resume.pdf",
+        "image":"https://github.com/lbarrios1985/proveyourworth/blob/master/image.jpg"
     }
     
     cookie = session.cookies.get("PHPSESSID")
